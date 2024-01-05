@@ -6,7 +6,7 @@ import "./styles.css";
 export default function App() {
   
   const [newItem, setNewItem] = useState("");
-  const [todos, setTodos] =
+  const [todos, setTodos] = useState("");
 
   return (
     <>
@@ -15,7 +15,7 @@ export default function App() {
         <label htmlFor="item">New Item</label>
         <input type="text" id="item" value={newItem} onChange={e=> setNewItem(e.target.value)}/>
         </div>
-        <button className="btn">Add</button>
+        <button className="btn" >Add</button>
       </form>
       <h1 className="header">Todo list</h1>
       <ul className="list">
@@ -27,6 +27,7 @@ export default function App() {
           <button className="btn btn-danger">Delete</button>
         </li>
       </ul>
+      
     </>
   )
 }
